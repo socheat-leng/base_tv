@@ -1,4 +1,4 @@
-package com.khmerpress.core.activities
+package com.khmerpress.core.base
 
 import android.app.Activity
 import android.os.Bundle

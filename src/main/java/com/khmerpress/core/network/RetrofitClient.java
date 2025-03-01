@@ -18,6 +18,7 @@ class RetrofitClient {
             OkHttpClient.Builder httpClient = new OkHttpClient.Builder();
             httpClient.readTimeout(1, TimeUnit.MINUTES);
             httpClient.connectTimeout(1, TimeUnit.MINUTES);
+            httpClient.addNetworkInterceptor(new UserAgentInterceptor(Config.Companion.getAgent()));
             httpClient.addInterceptor(logging);
             httpClient.proxy(Proxy.NO_PROXY);
             OkHttpClient client = httpClient.build();

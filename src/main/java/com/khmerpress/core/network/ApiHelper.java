@@ -7,7 +7,7 @@ package com.khmerpress.core.network;
 
 public class ApiHelper {
 
-    public static final String BASE_URL = "https://khmerpress.today/";
+    public static final String BASE_URL = Config.Companion.getServer_url();
 
     public static CoreService getAPIService() {
         return RetrofitClient.getClient(BASE_URL).create(CoreService.class);
