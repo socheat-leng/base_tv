@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_media_list"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/md_white_1000"
+    android:keepScreenOn="true"
+    android:orientation="vertical"
+    android:visibility="visible">
+
+    <FrameLayout
+        android:id="@+id/video_surface_frame"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:foregroundGravity="clip_horizontal|clip_vertical"
+        tools:ignore="true">
+
+        <SurfaceView
+            android:id="@+id/video_surface"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center" />
+
+        <LinearLayout
+            android:id="@+id/layout_controls"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_size_40dp"
+            android:layout_gravity="bottom"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/img_sound"
+                android:layout_width="0.0dip"
+                android:layout_height="48dp"
+                android:layout_weight="1.0"
+                android:background="?android:selectableItemBackground"
+                android:padding="10.0dip"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_volume_off"
+                app:tint="@color/colorPrimary" />
+
+            <ImageButton
+                android:id="@+id/img_play"
+                android:layout_width="0.0dip"
+                android:layout_height="48dp"
+                android:layout_weight="1.0"
+                android:background="?android:selectableItemBackground"
+                android:padding="10.0dip"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_play"
+                app:tint="@color/colorPrimary" />
+
+            <ImageButton
+                android:id="@+id/img_close"
+                android:layout_width="0.0dip"
+                android:layout_height="48dp"
+                android:layout_weight="1.0"
+                android:background="?android:selectableItemBackground"
+                android:padding="10.0dip"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_close"
+                app:tint="@color/colorPrimary" />
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</LinearLayout>

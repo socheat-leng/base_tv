@@ -1,0 +1,33 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/md_black_1000"
+    android:gravity="center"
+    android:orientation="vertical">
+
+
+    <com.khmerpress.core.views.TouchImageView
+        android:id="@+id/img_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:visibility="visible" />
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="@dimen/progress_bar_size_30dp"
+        android:layout_height="@dimen/progress_bar_size_30dp"
+        android:layout_gravity="center" />
+
+    <ImageView
+        android:id="@+id/btn_close"
+        android:layout_width="@dimen/button_size_40dp"
+        android:layout_height="@dimen/button_size_40dp"
+        android:layout_gravity="right"
+        android:padding="10dp"
+        android:src="@drawable/ic_close"
+        android:visibility="visible"
+        app:tint="@color/black" />
+
+</FrameLayout>

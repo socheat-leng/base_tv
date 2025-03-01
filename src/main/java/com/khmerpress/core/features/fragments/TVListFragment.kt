@@ -20,6 +20,7 @@ class TVListFragment : BaseFragment() {
     private var manager: GridLayoutManager? = null
     private var adapter: TVListAdapter? = null
     private var menu: Menu? = null
+    private var isLoading: Boolean = false
 
     companion object {
         fun newInstance(menu: Menu): TVListFragment {
@@ -43,11 +44,13 @@ class TVListFragment : BaseFragment() {
         savedInstanceState: Bundle?
     ): View {
         binding = FragmentTvBinding.inflate(layoutInflater)
+        events()
         getData(true)
         return binding.root
     }
 
     private fun getData(show: Boolean) {
+        isLoading = true
         if (show) {
             binding.infoView.showLoading()
         }
@@ -57,6 +60,18 @@ class TVListFragment : BaseFragment() {
             } else {
                 binding.infoView.showInfo("Empty!!!")
             }
+            isLoading = false
+            binding.swipeRefresh.isRefreshing = false
+        }
+    }
+
+    private fun events() {
+        binding.swipeRefresh.setOnRefreshListener {
+            if (isLoading) {
+                binding.swipeRefresh.isRefreshing = false
+                return@setOnRefreshListener
+            }
+            getData(false)
         }
     }
 

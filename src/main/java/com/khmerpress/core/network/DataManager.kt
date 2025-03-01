@@ -202,7 +202,7 @@ class DataManager private constructor(private val context: Context) {
         }
     }
 
-    fun getNativeBanners(): String {
+    fun getNativeBanner(): String {
         try {
             val rand = Random()
             return nativeBanners[rand.nextInt(nativeBanners.size)]

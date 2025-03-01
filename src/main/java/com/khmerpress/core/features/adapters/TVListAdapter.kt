@@ -1,6 +1,7 @@
 package com.khmerpress.core.features.adapters
 
 import android.app.Activity
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -9,8 +10,10 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.facebook.ads.AdSize
 import com.facebook.ads.AdView
+import com.khmerpress.core.features.activities.ChannelActivity
 import com.khmerpress.core.features.models.Station
 import com.khmerpress.core.features.viewholders.AdViewHolder
+import com.khmerpress.core.utils.Constants
 import today.khmerpress.core.R
 import today.khmerpress.core.databinding.ItemTvBinding
 
@@ -54,11 +57,11 @@ class TVListAdapter(
 
                 holder.binding.txtStation.text = station.name
                 holder.binding.layout.setOnClickListener {
-                    /*val intent = Intent(mActivity, ChannelActivity::class.java).apply {
+                    val intent = Intent(mActivity, ChannelActivity::class.java).apply {
                         putExtra(Constants.STATION, station)
                     }
                     mActivity.startActivity(intent)
-                    mActivity.overridePendingTransition(R.anim.enter, R.anim.hold)*/
+                    mActivity.overridePendingTransition(R.anim.enter, R.anim.hold)
                 }
             }
         }

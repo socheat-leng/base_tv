@@ -81,4 +81,12 @@ dependencies {
     // Networking
     api 'com.squareup.retrofit2:retrofit:2.11.0'
     api 'com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.14'
+
+    //Streaming
+    implementation("androidx.media3:media3-exoplayer:1.5.1")
+    implementation("androidx.media3:media3-exoplayer-dash:1.5.1")
+    implementation("androidx.media3:media3-exoplayer-hls:1.5.1")
+    implementation("androidx.media3:media3-exoplayer-rtsp:1.5.1")
+    implementation("androidx.media3:media3-ui:1.5.1")
+    implementation("org.videolan.android:libvlc-all:3.3.7")
 }
