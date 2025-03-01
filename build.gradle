@@ -1,7 +1,7 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 
-group = 'today.khmerpress.core'
+group = 'today.khmerpress.base_tv'
 version = '1.0.0'
 
 android {
