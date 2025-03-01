@@ -1,0 +1,81 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+
+group = 'today.khmerpress.core'
+version = '1.0.0'
+
+android {
+    compileSdk 35
+
+    defaultConfig {
+        minSdkVersion 21
+        targetSdkVersion 35
+        versionCode 1
+        versionName "1.0.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        debug {
+            minifyEnabled false
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        release {
+            minifyEnabled false
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    buildFeatures {
+        viewBinding true
+    }
+
+    namespace 'today.khmerpress.core'
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    // Google Support Libraries
+    api 'androidx.appcompat:appcompat:1.7.0'
+    api 'androidx.legacy:legacy-support-v4:1.0.0'
+    api 'androidx.recyclerview:recyclerview:1.4.0'
+    api 'androidx.cardview:cardview:1.0.0'
+    api 'androidx.annotation:annotation:1.9.1'
+    api 'androidx.browser:browser:1.8.0'
+    api 'androidx.media:media:1.7.0'
+    api 'com.google.android.material:material:1.12.0'
+
+    // Kotlin & Multidex
+    api 'org.jetbrains.kotlin:kotlin-stdlib:1.9.24'
+    api 'androidx.multidex:multidex:2.0.1'
+
+    // Image Processing (Glide)
+    api 'com.github.bumptech.glide:glide:4.16.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.16.0'
+
+    // Facebook & Google Ads
+    api 'com.facebook.android:audience-network-sdk:6.18.0'
+    api 'com.google.android.gms:play-services-ads:23.6.0'
+
+    // Firebase Services
+    api platform('com.google.firebase:firebase-bom:32.7.0')
+    api 'com.google.firebase:firebase-analytics'
+    api 'com.google.firebase:firebase-crashlytics'
+    api 'com.google.firebase:firebase-messaging'
+
+    // Background & Lifecycle
+    api 'androidx.work:work-runtime-ktx:2.10.0'
+    api 'androidx.activity:activity-ktx:1.10.0'
+
+    // Networking
+    api 'com.squareup.retrofit2:retrofit:2.11.0'
+    api 'com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.14'
+}
