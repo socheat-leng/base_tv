@@ -63,17 +63,20 @@ dependencies {
 
     // Facebook & Google Ads
     api 'com.facebook.android:audience-network-sdk:6.18.0'
-    api 'com.google.android.gms:play-services-ads:23.6.0'
+    api 'com.google.android.gms:play-services-ads:22.6.0'
 
     // Firebase Services
-    api platform('com.google.firebase:firebase-bom:32.7.0')
+    api platform('com.google.firebase:firebase-bom:32.7.2')
     api 'com.google.firebase:firebase-analytics'
     api 'com.google.firebase:firebase-crashlytics'
     api 'com.google.firebase:firebase-messaging'
+    api 'com.google.firebase:firebase-config'
+
+    api 'androidx.multidex:multidex:2.0.1'
 
     // Background & Lifecycle
     api 'androidx.work:work-runtime-ktx:2.10.0'
-    api 'androidx.activity:activity-ktx:1.10.0'
+    api 'androidx.activity:activity-ktx:1.10.1'
 
     // Networking
     api 'com.squareup.retrofit2:retrofit:2.11.0'
