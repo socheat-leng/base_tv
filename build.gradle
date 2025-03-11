@@ -1,5 +1,6 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
+apply plugin: 'maven-publish'
 
 group = 'today.khmerpress.base_tv'
 version = '1.0.0'
@@ -89,4 +90,18 @@ dependencies {
     implementation("androidx.media3:media3-exoplayer-rtsp:1.5.1")
     implementation("androidx.media3:media3-ui:1.5.1")
     implementation("org.videolan.android:libvlc-all:3.3.7")
+}
+
+publishing {
+    publications {
+        release(MavenPublication) {
+            groupId = 'today.khmerpress.base_tv'
+            artifactId = 'base_tv'
+            version = '1.0.0'
+
+            afterEvaluate {
+                from components.release
+            }
+        }
+    }
 }
