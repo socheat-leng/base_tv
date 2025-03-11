@@ -40,7 +40,6 @@ import com.khmerpress.core.utils.Constants;
 import java.util.ArrayList;
 import java.util.List;
 
-import today.khmerpress.core.BuildConfig;
 import today.khmerpress.core.R;
 import today.khmerpress.core.databinding.ActivityChannelBinding;
 
@@ -83,7 +82,7 @@ public class ChannelActivity extends BaseActivity {
         RequestOptions options = new RequestOptions();
         Glide.with(this).load(tvs.getImage()).placeholder(R.drawable.ic_holder).error(R.drawable.ic_holder).into(binding.imgLogo);
         if (DataManager.Companion.getInstance(mActivity).getReview() == 1) {
-            if (BuildConfig.DEBUG) {
+            if (true) {
                 binding.layoutLive.setVisibility(View.VISIBLE);
             } else {
                 binding.layoutLive.setVisibility(View.GONE);

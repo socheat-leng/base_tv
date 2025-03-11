@@ -63,7 +63,6 @@ import java.util.Date;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import today.khmerpress.core.BuildConfig;
 import today.khmerpress.core.R;
 
 /**
@@ -593,7 +592,7 @@ public class AppUtil {
     }
 
     public static void showLog(String label, Object message) {
-        if (BuildConfig.DEBUG) {
+        if (true) {
             if (null == message)
                 message = "null";
             String str = String.valueOf(message);
